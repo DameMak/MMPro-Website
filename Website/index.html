@@ -102,35 +102,11 @@ section h2 { /* Section titles like About Us, etc. */
    HERO SECTION (Home / Top Banner)
 ==================================*/
 .hero {
-    position: relative;
     padding: 40px 20px 80px;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    /* === Semi-Transparent Overlay === */
-    background-color: rgba(0, 0, 0, 0.4); /* Black overlay at 40% opacity */
-    z-index: 0;
 }
-
-.hero h1,
-.hero p,
-.hero .stars,
-.hero .phone-number {
-    position: relative;
-    z-index: 1; /* Make sure text is above overlay */
-    color: white; /* Text will be white for readability */
-}
-
 
 
 .hero h1 { /* Main headline in hero */
@@ -306,7 +282,6 @@ section h2 { /* Section titles like About Us, etc. */
 }
 
 
-/* === Continuous Slider === */
 .slider-wrapper {
   overflow: hidden;
   position: relative;
@@ -319,7 +294,7 @@ section h2 { /* Section titles like About Us, etc. */
 }
 
 .slider img {
-  width: calc((100% - 30px) / 4); /* Show 4 at a time */
+  width: calc((100% - 30px) / 4); /* 4 images with 10px gap between */
   flex-shrink: 0;
   cursor: pointer;
   border-radius: 6px;
@@ -327,62 +302,15 @@ section h2 { /* Section titles like About Us, etc. */
   user-select: none;
 }
 
+/* Animation for continuous left scroll */
 @keyframes scroll-left {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
-
-/* === Lightbox Modal === */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 2000;
-}
-
-.lightbox.hidden { display: none; }
-
-.lightbox-img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-.lightbox-controls {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.lightbox-controls span {
-  cursor: pointer;
-  font-size: 3em;
-  color: white;
-  user-select: none;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  color: white;
-  font-size: 2.5em;
-  cursor: pointer;
-  user-select: none;
-}
-
 
 .site-footer {
   background-color: #000;
@@ -640,33 +568,24 @@ Cleaned up every days so very little mess was also a big plus. Would highly reco
 
 
 
-<section id="gallery" class="gallery-section">
+        <section id="gallery" class="gallery-section">
   <h2>Gallery</h2>
   <div class="slider-wrapper">
-    <div class="slider" id="gallerySlider">
-      <img src="Images/House 1.webp" alt="Gallery Image 1" />
-      <img src="Images/House 2.webp" alt="Gallery Image 2" />
-      <img src="Images/Garage 1.webp" alt="Gallery Image 3" />
-      <img src="Images/House 3.webp" alt="Gallery Image 4" />
-      <img src="Images/House 5.jpg" alt="Gallery Image 5" />
-      <img src="Images/House 6.jpg" alt="Gallery Image 6" />
-      <img src="Images/House 7.jpg" alt="Gallery Image 7" />
-      <img src="Images/House 8.jpg" alt="Gallery Image 8" />
-      <img src="Images/Garage 2a.jpg" alt="Gallery Image 9" />
+    <div class="slider">
+      <!-- Add as many images as you want -->
+      <img src="Images\House 1.webp" alt="Gallery Image 1" />
+      <img src="Images\House 2.webp" alt="Gallery Image 2" />
+      <img src="Images\Garage 1.webp" alt="Gallery Image 3" />
+      <img src="Images\House 3.webp" alt="Gallery Image 4" />
+      <img src="Images\House 5.jpg" alt="Gallery Image 5" />
+      <img src="Images\House 6.jpg" alt="Gallery Image 6" />
+      <img src="Images\House 7.jpg" alt="Gallery Image 7" />
+        <img src="Images\House 8.jpg" alt="Gallery Image 8" />
+        <img src="Images\Garage 2a.jpg" alt="Gallery Image 9" />
+        
     </div>
   </div>
 </section>
-
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox hidden">
-  <span class="close">&times;</span>
-  <img class="lightbox-img" src="" alt="Expanded Gallery Image">
-  <div class="lightbox-controls">
-    <span class="prev">&#10094;</span>
-    <span class="next">&#10095;</span>
-  </div>
-</div>
 
     </main>
 
@@ -722,35 +641,5 @@ Cleaned up every days so very little mess was also a big plus. Would highly reco
   feather.replace();
 </script>
 
-
-<script src="https://unpkg.com/feather-icons"></script>
-<script>
-  feather.replace();
-</script>
-
-<!-- === Infinite Gallery + Lightbox Script === -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const slider = document.getElementById("gallerySlider");
-  const images = Array.from(slider.children);
-
-  // Duplicate images to create seamless scroll
-  slider.innerHTML += slider.innerHTML;
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeLightbox();
-    if (!lightbox.classList.contains("hidden")) {
-      if (e.key === "ArrowRight") showImage(currentIndex + 1);
-      if (e.key === "ArrowLeft") showImage(currentIndex - 1);
-    }
-  });
-});
-</script>
-
-    
 </body>
 </html>
-
-
-
-
