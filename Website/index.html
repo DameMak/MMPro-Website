@@ -108,39 +108,6 @@ section h2 { /* Section titles like About Us, etc. */
     margin: 0 auto;
     text-align: center;
 
-    /* === Background Image === */
-    background-image: url("Images/House 1.webp"); /* replace with your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 8px; /* optional if you want rounded corners */
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    /* === Semi-Transparent Overlay === */
-    background-color: rgba(0, 0, 0, 0.4); /* Black overlay at 40% opacity */
-    z-index: 0;
-}
-
-.hero h1,
-.hero p,
-.hero .stars,
-.hero .phone-number {
-    position: relative;
-    z-index: 1; /* Make sure text is above overlay */
-    color: white; /* Text will be white for readability */
-}
-
-
-
 .hero h1 { /* Main headline in hero */
     color: black;
     font-weight: bold;
@@ -758,6 +725,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
 </body>
 </html>
+
 
 
 
