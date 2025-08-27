@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lake County Siding Installation</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    /* General Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; color: #333; line-height: 1.6; }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+    h1, h2, h3 { margin-bottom: 15px; }
+    a { text-decoration: none; }
+
+    /* Header */
+    .site-header { background: #fff; padding: 15px 0; border-bottom: 1px solid #eee; }
+    .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 700; font-size: 1.2rem; }
+    .logo span { color: #E94F1D; font-weight: 600; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav a { color: #000; font-weight: 500; }
+    .btn-phone { background: #E94F1D; color: #fff; padding: 10px 18px; border-radius: 4px; }
+
+    /* Hero */
+    .hero { background: url('/assets/hero.jpg') center/cover no-repeat; height: 80vh; position: relative; color: #fff; display: flex; justify-content: center; align-items: center; text-align: center; }
+    .hero .overlay { background: rgba(0,0,0,0.5); padding: 40px; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero .btn, .hero .btn-outline { margin: 10px; }
+
+    /* Buttons */
+    .btn { background: #E94F1D; color: #fff; padding: 12px 24px; border-radius: 4px; display: inline-block; }
+    .btn-outline { border: 2px solid #fff; color: #fff; padding: 10px 22px; border-radius: 4px; display: inline-block; }
+
+    /* About */
+    .about { display: flex; gap: 40px; padding: 60px 0; align-items: center; flex-wrap: wrap; }
+    .about-image { background: url('/assets/about.jpg') center/cover no-repeat; flex: 1; height: 300px; border-radius: 6px; }
+    .about-text { flex: 1; }
+
+    /* Services */
+    .services { padding: 60px 0; text-align: center; }
+    .services .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
+    .services .card { background: #f9f9f9; border-radius: 6px; padding: 20px; }
+    .services .img { background: #ddd; height: 160px; border-radius: 6px; margin-bottom: 10px; }
+
+    /* Gallery */
+    .gallery { background: #E94F1D; color: #fff; padding: 60px 0; text-align: center; }
+    .gallery .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+    .gallery-item { background: #ddd; height: 180px; border-radius: 6px; }
+
+    /* Reviews */
+    .reviews { padding: 60px 0; text-align: center; }
+    .reviews blockquote { font-style: italic; margin: 20px auto; max-width: 700px; }
+
+    /* Siding Types */
+    .siding-types { padding: 60px 0; text-align: center; }
+    .siding-types .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
+    .siding-types .card { background: #f9f9f9; padding: 20px; border-radius: 6px; }
+    .siding-types .img { background: #ddd; height: 160px; border-radius: 6px; margin-bottom: 10px; }
+
+    /* CTA */
+    .cta { background: #E94F1D; color: #fff; text-align: center; padding: 60px 20px; }
+    .cta h2 { margin-bottom: 20px; }
+
+    /* Contact */
+    .contact { padding: 60px 0; text-align: center; }
+
+    /* Footer */
+    .site-footer { background: #111; color: #fff; padding: 30px 20px; text-align: center; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <div class="logo">Lake County <span>Siding Installation</span></div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="tel:2249081228" class="btn-phone">(224) 908-1228</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="overlay">
+      <h1>Stunning & Long-lasting Siding</h1>
+      <p>Keep your home looking great</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn">Our Services</a>
+        <a href="#reviews" class="btn-outline">⭐ Read Our Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about container">
+    <div class="about-image"></div>
+    <div class="about-text">
+      <h2>Lake County Siding Installation</h2>
+      <p>We are a reputable and trustworthy siding company serving the local area. We specialize in siding replacement, and new home siding installations. Siding is essential in protecting your home’s interior from moisture and wind while adding value and curb appeal to your property.</p>
+      <p>Our contractors install vinyl siding and James Hardie siding because of their high-quality attributes.</p>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services container">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card"><div class="img"></div><h3>Gutters</h3></div>
+      <div class="card"><div class="img"></div><h3>Windows</h3></div>
+      <div class="card"><div class="img"></div><h3>Siding</h3></div>
+      <div class="card"><div class="img"></div><h3>Roofing</h3></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Our Work <span>See Beautiful Results</span></h2>
+      <div class="grid">
+        <div class="gallery-item"></div>
+        <div class="gallery-item"></div>
+        <div class="gallery-item"></div>
+        <div class="gallery-item"></div>
+      </div>
+      <a href="#gallery" class="btn">Check Our Gallery</a>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews container">
+    <h2>Voices of Our Clients</h2>
+    <blockquote>
+      "The siding contractors near me were thorough and provided updates throughout the installation."
+      <cite>– Client Name</cite>
+    </blockquote>
+  </section>
+
+  <!-- SIDING TYPES -->
+  <section class="siding-types container">
+    <h2>Siding We Offer <span>Explore Our Choices</span></h2>
+    <div class="grid">
+      <div class="card"><div class="img"></div><h3>Insulated Siding</h3></div>
+      <div class="card"><div class="img"></div><h3>LP Smart Siding</h3></div>
+      <div class="card"><div class="img"></div><h3>Cedar Siding</h3></div>
+      <div class="card"><div class="img"></div><h3>Vinyl Siding</h3></div>
+      <div class="card"><div class="img"></div><h3>Aluminum Siding</h3></div>
+      <div class="card"><div class="img"></div><h3>James Hardie Siding</h3></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Make Your Home Shine<br>Speak to Our Trusted Team</h2>
+    <a href="#contact" class="btn">Get a Free Quote</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <p>Email: info@yourcompany.com | Phone: (224) 908-1228</p>
+    <p>20 US-12, Fox Lake, IL 60020<br>Mon – Sat: 7:30 AM – 7 PM</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="logo">Lake County <span>Siding Installation</span></div>
+      <p>© 2025 Lake County Siding Installation. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
